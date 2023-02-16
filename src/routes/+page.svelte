@@ -5,27 +5,11 @@
     
     export let expenseTotal = 0;
 
-    console.log(typeof(data));
-
-    let k: keyof typeof data;  // Type is "one" | "two" | "three"
-    
-    // console.log(data.expenses[0]);
-
     let expensesArray = data.expenses;
-    console.log(expensesArray);
-    // let expenseTotal = 0;
-    expensesArray.forEach(expenseItem => {
-        console.log(typeof(expenseItem.amount));
+    
+    expensesArray.forEach(expenseItem => {        
         expenseTotal += expenseItem.amount;
     })
-
-    console.log(expenseTotal);
-
-    /* for (k in data) {
-        data[k];  // OK
-        console.log(data[k]);
-    } */
-    
 
     $: ({ expenses } = data)
 </script>
@@ -64,15 +48,15 @@
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                             Title
                         </label>          
-                        <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" placeholder="Title"  name="title" required>            
+                        <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" placeholder="What did you buy?"  name="title" required>            
                     </div>
             
                     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
         
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                           Description
-                        </label>          
-                        <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" placeholder="Description"  name="description" required>            
+                        </label>                                  
+                        <textarea rows = "2" class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Any extra purchase info..."  name="description" required></textarea>
                     </div>
             
                       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -111,8 +95,8 @@
             
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                             Description
-                            </label>          
-                            <input class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="{expense.description}"  name="description" disabled>            
+                            </label>                                      
+                            <textarea rows = "2" class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" value="{expense.description}"  name="description" disabled></textarea>
                         </div>
                 
                         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">

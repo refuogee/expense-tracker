@@ -4,8 +4,7 @@ import { MONGO_URI } from '$env/static/private';
 
 const client = new MongoClient(MONGO_URI);
 
-export function start_mongo() {
-    console.log('starting mongo...');
+export function start_mongo() {    
     return client.connect();
 }
 

@@ -35,10 +35,7 @@ export const actions = {
             date : data.get('date'),
         }
         
-        const result = await expenses.insertOne(expense);
-        console.log(
-        `A document was inserted with the _id: ${result.insertedId}`,
-        );
+        const result = await expenses.insertOne(expense);        
         return { success: true }
       },
     
@@ -46,7 +43,6 @@ export const actions = {
         const remove_data = await request.formData();
         
         const idToDelete = remove_data.get('id');
-        console.log(idToDelete);
 
         const rem_result = await expenses.deleteOne( { "_id" : new ObjectId(idToDelete) } );
         return { success: true }
