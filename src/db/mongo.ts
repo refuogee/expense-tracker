@@ -9,4 +9,6 @@ export function start_mongo() {
     return client.connect();
 }
 
+// Initially I didn't signal which database to use and couldn't figure out why it wasn't working
+
 export default client.db('my-expenses')

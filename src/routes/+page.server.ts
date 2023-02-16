@@ -12,6 +12,8 @@ export const load: PageServerLoad = async function() {
     }
 }
 
+// The Expense interface
+
 interface Expense {
     amount: number;
     title: string;
@@ -20,6 +22,8 @@ interface Expense {
     }
 
 export const actions = {
+    
+    // This gave me warnings initially but still wroked. Until I added in the type of request.
 
     new: async ({ request }: { request : HTMLFormElement}) => {
         const data = await request.formData();
