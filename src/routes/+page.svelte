@@ -44,7 +44,7 @@
 
     <div class="container mx-auto bg-gray-100 rounded-xl shadow border p-8 m-10 relative">
         <p class="text-xl p-1 mb-0 font-medium underline">Expenses</p>
-        <p class="text-base p-1 mb-6 font-light">The below is a list of your expenses. To remove an expense press the red delete sign. To add an expense input the required info at the bottom of the screen.</p>
+        <p class="text-base p-1 mb-6 font-light">The below is a list of your expenses. To remove an expense press the red delete sign. To add an expense input the required info below.</p>
 
         <div class="container mx-auto bg-gray-100 rounded-xl shadow border p-8 m-10">
             <p class="text-xl p-1 mb-0 font-medium">Add an Expense</p>
@@ -57,7 +57,7 @@
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                         Date:
                       </label>
-                      <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="date" placeholder="yyyy/mm/dd"  name="date" required>
+                      <input class="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="date" placeholder="yyyy/mm/dd"  name="date" required>
                     </div>
             
                     <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -97,14 +97,14 @@
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                             Date:
                         </label>
-                        <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="{new Date(expense.date).toLocaleDateString("en-GB", {weekday: "long", year: "numeric", month: "long", day: "numeric"})}"  name="date" disabled>
+                        <input class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="{new Date(expense.date).toLocaleDateString("en-GB", {weekday: "long", year: "numeric", month: "long", day: "numeric"})}"  name="date" disabled>
                         </div>
                 
                         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                                 Title
                             </label>                          
-                            <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="{expense.title}"  name="title" disabled>            
+                            <input class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="{expense.title}"  name="title" disabled>            
                         </div>
                 
                         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -112,14 +112,14 @@
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                             Description
                             </label>          
-                            <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="{expense.description}"  name="description" disabled>            
+                            <input class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value="{expense.description}"  name="description" disabled>            
                         </div>
                 
                         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                             Amount
                         </label>          
-                        <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" placeholder="{ (expense.amount).toLocaleString('en-US', { style: 'currency', currency: 'ZAR' }) }" name="amount" step="0.01" disabled>            
+                        <input class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" placeholder="{ (expense.amount).toLocaleString('en-US', { style: 'currency', currency: 'ZAR' }) }" name="amount" step="0.01" disabled>            
                         </div>
                         <button class="bg-red-500 h-10 hover:bg-red-700 text-white font-bold mt-7 py-2 px-4 rounded"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
