@@ -48,7 +48,7 @@
 
         <div class="container mx-auto bg-gray-100 rounded-xl shadow border p-8 m-10">
             <p class="text-xl p-1 mb-0 font-medium">Add an Expense</p>
-            <p class="text-base p-1 mb-6 font-light">To add an expense input the required info and press save.</p>
+            <p class="text-base p-1 mb-6 font-light">To add an expense input the required info and press add.</p>
             <form method="POST" action="?/new">
                 
                 <div class="flex -mx-3 mb-2">
@@ -81,7 +81,7 @@
                         </label>          
                        <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="number" placeholder="Expense Amount" name="amount" step="0.01" required>            
                       </div>
-                      <button class="bg-blue-500 hover:bg-blue-700 h-10  text-white font-bold mt-7 py-2 px-4 rounded">Save</button>  
+                      <button class="bg-green-600 hover:bg-green-700 h-10  text-white font-bold mt-7 py-2 px-4 rounded">Add</button>  
                 </div>
             </form>
         </div>
@@ -131,7 +131,7 @@
         
         
         <div class="container mx-auto bg-gray-100 rounded-xl shadow border p-8 mt-10 mb-1 flex justify-end">
-            <p class="text-xl p-1 mb-0 font-medium">Expenses Total: { (expenseTotal).toLocaleString('en-US', { style: 'currency', currency: 'ZAR' }) }</p>
+            <p class="text-xl p-1 mb-0 font-medium">Total: <span class="underline underline-offset-4"> { (expenseTotal).toLocaleString('en-US', { style: 'currency', currency: 'ZAR' }) } </span></p>
         </div>
     </div>
     
