@@ -56,7 +56,7 @@
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                           Description
                         </label>                                  
-                        <textarea rows = "2" class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Any extra purchase info..."  name="description" required></textarea>
+                        <textarea rows = "1" class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Any extra purchase info..."  name="description" required></textarea>
                     </div>
             
                       <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -96,7 +96,7 @@
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
                             Description
                             </label>                                      
-                            <textarea rows = "2" class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" value="{expense.description}"  name="description" disabled></textarea>
+                            <textarea rows = "1" class="appearance-none block w-full disabled:bg-slate-100 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" value="{expense.description}"  name="description" disabled></textarea>
                         </div>
                 
                         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
